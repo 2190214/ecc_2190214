@@ -38,11 +38,19 @@ public:
 	int getAttack() { return attack; }
 
 	// コンストラクタ
-
+    Monster() {
+        cout << "Monster クラスのコンストラクタが呼び出されました。" << endl;
+        name = "未設定";
+        hp = 0;
+        attack = 0;
+    }
 
 
 	// デストラクタ
+    ~Monster() {
+        cout << "Monster クラス ("<< name << ") のデストラクタが呼び出されました。" << endl;
 
+    }
 
 
 };
@@ -65,6 +73,7 @@ int main()
 	Monster		m1;
 
 	// ここでm1のデータを表示してみる
+    m1.showData();
 
 	cout << "ピカチュウのデータを設定します。" << endl;
 	m1.setName("ピカチュウ");
@@ -79,6 +88,7 @@ int main()
 	Monster		m2;
 
 	// ここでm2のデータを表示してみる
+    m2.showData();
 
 	cout << "ディアルガのデータを設定します。" << endl;
 	m2.setName("ディアルガ");
