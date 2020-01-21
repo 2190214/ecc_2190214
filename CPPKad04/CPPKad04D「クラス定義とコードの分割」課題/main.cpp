@@ -41,41 +41,46 @@ public:
 	{
 		cout << "Monsterクラスのデストラクタが呼び出されました！" << endl;
 	}
-	// データ表示
-	void showData()
-	{
-		cout << name << "の体力は、" << hp << "です。" << endl;
-	}
 
-	// 散歩する
-	void walk()
-	{
-		if (hp > 0) {
-			cout << "てくてく・・・" << endl;
-			hp--;
-		}
-		else {
-			cout << "疲れて歩けないよ～" << endl;
-		}
-	}
+    void showData();
+    void walk();
+    void sleep();
 
-	// 眠る
-	void sleep()
-	{
-		cout << "ぐうぐう・・・";
-		int recover = rand() % 3;
-		if (recover > 0) {
-			cout << "体力が" << recover << "回復した!" << endl;
-			hp += recover;
-		}
-		else {
-			cout << "よく眠れなかった！" << endl;
-		}
-	}
 };
 
 // メンバ関数のコード
 
+// データ表示
+void Monster::showData()
+{
+    cout << name << "の体力は、" << hp << "です。" << endl;
+}
+
+// 散歩する
+void Monster::walk()
+{
+    if (hp > 0) {
+        cout << "てくてく・・・" << endl;
+        hp--;
+    }
+    else {
+        cout << "疲れて歩けないよ～" << endl;
+    }
+}
+
+// 眠る
+void Monster::sleep()
+{
+    cout << "ぐうぐう・・・";
+    int recover = rand() % 3;
+    if (recover > 0) {
+        cout << "体力が" << recover << "回復した!" << endl;
+        hp += recover;
+    }
+    else {
+        cout << "よく眠れなかった！" << endl;
+    }
+}
 
 
 
