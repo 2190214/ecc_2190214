@@ -41,7 +41,9 @@ int main()
 		cout << endl;
 
 		// ジャイアンのときクラス名を「オレ様のクラス」に変更する
-
+        if (n == 2) {
+            s[n].setClassName("オレ様のクラス");
+        }
 		s[n].showData();
 		cout << endl;
 	}

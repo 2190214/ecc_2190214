@@ -1,8 +1,9 @@
-#ifndef _STUDENT_H_
-#define	_STUDENT_H_
+#ifndef _STUDENT_H_STUDENT
+#define	_STUDENT_H_STUDENT
 
 #include <iostream>
 #include <string>
+#include <stdio.h>
 using namespace std;
 
 class Student
@@ -12,19 +13,20 @@ private:
 	int				id;					// 学籍番号
 
 	// クラス名
-
+    static string className;
 
 public:
 	// コンストラクタ
+    Student();
 
-
-	// デストラクタ
-
+        // デストラクタ
+    ~Student();
 
 	void setData(string n, int i);
 	void showData();
 
 	// classNameのセッター
+    void setClassName(string n);
 
 
 };
