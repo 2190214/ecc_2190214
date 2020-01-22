@@ -9,13 +9,8 @@
 //
 //
 //******************************************************************************
-
-#include <iostream>
-using namespace std;
-
-
 // クラス定義のヘッダファイル
-
+#include "Rocket.h"
 
 
 //******************************************************************************
@@ -27,11 +22,33 @@ using namespace std;
 int main()
 {
 	// 実体の生成
+    Rocket r(15, 0, 300);
 
-
+    //データ表示
+    r.showData();
 
 	// ロケットの操作
+    while (1)
+    {
+        r.showData();
+        int c;
+        cout << "どうしますか？(0:何もしない、1:燃料を使う、-1:終了する)" << endl;
+        cin >> c;
+        if (c < 0) break;
 
+        switch (c)
+        {
+        case 0:
+            r.move();
+
+            break;
+            
+        case 1:
+            r.useFuel();
+            r.move();
+            break;
+        }
+    }
 
 
 	return 0;
